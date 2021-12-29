@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -15,10 +15,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    FormsModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule],
   declarations: [
-    NotFoundComponent
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    NotFoundComponent    
   ]
 })
 export class AppRoutingModule { }

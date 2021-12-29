@@ -1,1 +1,8 @@
 <h1>about works!</h1>
+<p><span [style]="user.activeStyle">{{user.name}}</span></p>
+<p><span [style]="user2.activeStyle">{{user2.name}}</span></p>
+<button class="btn btn-outline-primary" (click)="switchStyle()" >Switch Style</button>
+<div>
+    <label for="">New user name</label>
+    <input type="text" name="" [(ngModel)]="user.name"  id="">
+</div>
