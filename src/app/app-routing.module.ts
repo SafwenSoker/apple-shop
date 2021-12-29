@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     FormsModule,
+    CommonModule,
     RouterModule.forRoot(routes)],
   exports: [RouterModule],
   declarations: [

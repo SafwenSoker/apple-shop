@@ -5,4 +5,10 @@
 <div>
     <label for="">New user name</label>
     <input type="text" name="" [(ngModel)]="user.name"  id="">
+    <br>
+    Short Date : {{  today | date:'shortDate'}}
+    <br>
+    Long Date : {{  today | date:'longDate'}}
+    <br>
+    Full Date : {{  today | date:'fullDate'}}
 </div>
