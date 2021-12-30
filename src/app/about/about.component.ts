@@ -31,14 +31,15 @@ export class AboutComponent implements OnInit {
       }
     },
   ];
-  
+
+  private color: any;
+  public showButton = true;
+  public choice = "SEM";
   public today = new Date();
   constructor() { }
 
   ngOnInit(): void {
   }
-  private color: any;
-  public showButton = true;
   public switchStyle(){
     this.color = this.users[0].activeStyle.color;
     this.users[0].activeStyle.color = this.users[1].activeStyle.color;

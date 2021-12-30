@@ -19,3 +19,11 @@
     <br>
     Full Date : {{  today | date:'fullDate'}}
 </div>
+<div *ngIf="choice === 'DSI3'; then choiceDSI; else otherChoice;" >
+</div>
+<ng-template #choiceDSI>
+    <span>You have chosen DSI</span>
+</ng-template>
+<ng-template #otherChoice>
+    <span>You have {{choice}}</span>
+</ng-template>
