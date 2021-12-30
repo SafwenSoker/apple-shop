@@ -7,31 +7,41 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent implements OnInit {
 
-  public user = {
-    name : "John",
-    age : 32,
-    email : "John@email.com",
-    activeStyle : {
-      color :"red",
-      fontWeight : "bold"
-    }
-  };
-  public user2 = {
-    name : "Safwen",
-    age : 21,
-    email : "Safwen@email.com",
-    activeStyle : {
-      color :"blue",
-      fontStyle : "italic"
-    }
-  };
+  public users = [
+    {
+      name: 'Safwen Soker',
+      age: 32,
+      group: "DSI33",
+      email: 'safwensoker@gmail.com',
+      phone: '+33 6 12 34 56 78',
+      activeStyle: {
+        color: 'red',
+        fontWeight: 'bold'
+      }
+    },
+    {
+      name: 'Jane Doe',
+      age: 29,
+      group: "DSI32",
+      email: 'jane.doe.gmail.com',
+      phone: '+33 6 43 34 78 90',
+      activeStyle : {
+        color: 'blue',
+        fontStyle: 'italic'
+      }
+    },
+  ];
   
   public today = new Date();
   constructor() { }
 
   ngOnInit(): void {
   }
+  private color: any;
+  public showButton = true;
   public switchStyle(){
-    this.user.activeStyle.color = "blue";
+    this.color = this.users[0].activeStyle.color;
+    this.users[0].activeStyle.color = this.users[1].activeStyle.color;
+    this.users[1].activeStyle.color = this.color;
   }
 }
