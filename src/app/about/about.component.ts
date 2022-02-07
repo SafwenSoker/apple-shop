@@ -7,6 +7,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent implements OnInit {
 
+
+  public changeText(){
+  }
   public users = [
     {
       name: 'Safwen Soker',

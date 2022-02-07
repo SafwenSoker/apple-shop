@@ -7,7 +7,9 @@
         </span>
     </li>
 </ul>
-<button class="btn btn-outline-primary" *ngIf="showButton"  (click)="switchStyle()" >Switch Style</button>
+<input type="button" [(ngModel)]="users[0].name" (click)="changeText()">
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<button class="btn btn-outline-primary" *ngIf="showButton" (click)="switchStyle()" >Switch Style</button>
 <div>
     <label for="">New user name</label>
     <input type="text" name="" [(ngModel)]="users[0].name"  id="">
