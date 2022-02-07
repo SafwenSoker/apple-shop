@@ -10,12 +10,16 @@ export class CoursesComponent implements OnInit {
 
   public coursesList: Course[] = courses;
 
+  public cartContent: any[]= [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.cartContent = JSON.parse(localStorage.getItem('cart') || '') || [];
   }
 
   public addToCart(id: String):void {
-    localStorage.setItem('cart', JSON.stringify(id))
+    this.cartContent.push(id);
+    localStorage.setItem('cart', JSON.stringify(this.cartContent));
   }
 }
