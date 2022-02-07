@@ -10,7 +10,7 @@ import { courses } from 'src/app/courses-list';
 })
 export class CourseDetailsComponent implements OnInit {
 
-  private course? :Course;
+  public course? :Course;
   
   constructor(private route: ActivatedRoute){}
 
@@ -19,10 +19,6 @@ export class CourseDetailsComponent implements OnInit {
       const courseId = params.get('id');
       this.course = courses.filter(course => course.id === courseId)[0];
     });
-  }
-
-  getTitle(): string {
-    return this.course ? this.course.title : "";
   }
 
 }
