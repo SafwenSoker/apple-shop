@@ -19,7 +19,7 @@ export class CoursesComponent implements OnInit {
   }
 
   public addToCart(id: String):void {
-    this.cartContent.push(id);
+    this.cartContent.filter(elem => elem.id === id)[0] ? this.cartContent.filter(elem => elem.id === id)[0].quantity++ : this.cartContent.push({id: id, quatity: 1});
     localStorage.setItem('cart', JSON.stringify(this.cartContent));
   }
 }
