@@ -23,5 +23,10 @@
             <li *ngFor="let requirement of course?.requirements" > {{ requirement }} </li>
         </ul>
         <p class="card-text text-end"><small class="text-muted">Last Updated: {{ course?.last_update }}</small></p>
+        <div class="btn-group">
+            <button routerLink="/courses" type="button" class="btn btn-sm btn-outline-secondary">
+                <i class="bt bt-zoom-in"></i>
+            </button>
+        </div>
     </div>
 </div>

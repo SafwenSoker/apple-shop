@@ -21,4 +21,9 @@ export class CourseDetailsComponent implements OnInit {
     });
   }
 
+  public addToCart(id? : String):void {
+    console.log(id);
+    
+  }
+
 }
