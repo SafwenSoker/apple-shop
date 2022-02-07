@@ -15,4 +15,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public addToCart(id: String):void {
+    localStorage.setItem('cart', JSON.stringify(id))
+  }
 }
