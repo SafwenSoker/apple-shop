@@ -23,10 +23,11 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button routerLink="/courses/{{course.id}}" type="button" class="btn btn-sm btn-outline-secondary">
-                        <i class="bi bi-zoom-in"></i>
+                      <i class="fa-solid fa-magnifying-glass-plus"></i>
                     </button>
-                    <button  (click)="addToCart(course.id)" type="button" class="btn btn-sm btn-outline-secondary"><i
-                        class="bi bi-cart-plus"></i></button>
+                    <button  (click)="addToCart(course.id)" type="button" class="btn btn-sm btn-outline-secondary">
+                      <i class="fas fa-cart-plus"></i>
+                    </button>
                   </div>
                   <small class="text-muted">{{ course.price }}</small>
                 </div>
