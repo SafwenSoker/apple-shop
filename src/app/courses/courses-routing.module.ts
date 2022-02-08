@@ -5,7 +5,6 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { CommonModule } from '@angular/common';
 const routes: Routes = [
   { path: '', component: CoursesComponent },
-  { path: 'course-details', component: CourseDetailsComponent },
   { path: ':id', component: CourseDetailsComponent}
 ];
 @NgModule({
