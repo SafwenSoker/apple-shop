@@ -14,7 +14,7 @@ export class CartService {
   }
 
   add(productID? : string) {
-    this.cartContent.filter((elem: Course) => elem.id === productID)[0] ? this.cartContent.filter((elem: Course) => elem.id === productID)[0].quatity++ : this.cartContent.push({id: productID, quantity: 1});
+    this.cartContent.filter((elem: Course) => elem.id === productID)[0] ? this.cartContent.filter((elem: Course) => elem.id === productID)[0].quantity++ : this.cartContent.push({id: productID, quantity: 1});
     this.localStorageService.set('cart', this.cartContent);
   }
 
