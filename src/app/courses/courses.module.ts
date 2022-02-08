@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CoursesRoutingModule } from './courses-routing.module';
 import { CoursesComponent } from './courses.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { CoursesComponent } from './courses.component';
   ],
   imports: [
     CommonModule,
-    CoursesRoutingModule
+    CoursesRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class CoursesModule { }
