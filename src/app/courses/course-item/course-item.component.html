@@ -8,9 +8,9 @@
             <button routerLink="/courses/{{courseItem.id}}" type="button" class="btn btn-sm btn-outline-secondary">
                 <i class="fa-solid fa-magnifying-glass-plus"></i>
             </button>
-            <!-- <button  (click)="addToCart(courseItem.id)" type="button" class="btn btn-sm btn-outline-secondary">
+            <button  (click)="addToCart.emit(courseItem.id)" type="button" class="btn btn-sm btn-outline-secondary">
                 <i class="fas fa-cart-plus"></i>
-            </button> -->
+            </button>
             </div>
             <small class="text-muted">{{ courseItem.price }}</small>
         </div>
