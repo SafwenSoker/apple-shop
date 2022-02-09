@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { courses } from 'src/app/courses-list';
 import { Course } from 'src/app/course.model';
+import { CourseService } from 'src/app/services/course.service';
 import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-courses',
@@ -9,11 +9,14 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CoursesComponent implements OnInit {
 
-  public coursesList: Course[] = courses;
+  public coursesList: any = [];
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private courseService: CourseService) {}
 
   ngOnInit(): void {
+    this.courseService.all().subscribe(
+      res => this.coursesList = res
+    );
   }
 
   public addToCart(id?: string):void {

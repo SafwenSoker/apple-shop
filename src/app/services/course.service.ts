@@ -8,12 +8,14 @@ export class CourseService {
 
   constructor(private http: HttpClient) { }
 
+  private apiUrl = 'http://localhost:3000/courses';
   
   /**
    * Get all courses
    * @returns Observable<Course[]> 
    */
   all(){
+    return this.http.get(this.apiUrl);
   }
 
   /**
