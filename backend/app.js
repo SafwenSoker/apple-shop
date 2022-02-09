@@ -1,7 +1,12 @@
 const http = require('http')
 const express = require('express')
+const mongoose = require('mongoose')
 
-const app = express()
+const app = express();
+
+mongoose.connect(process.env.MONGO_URI)//you can connect either your using atlas or by installing mongodb locally
+    .then(()=> console.log('Connected successfully to mongodb Atlas'))
+    .catch(()=> console.log('Failed to connect to mongodb Atlas'))
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
