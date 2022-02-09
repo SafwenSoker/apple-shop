@@ -18,6 +18,10 @@ export class CartComponent implements OnInit {
     this.computeTotalPrice();    
   }
 
+  clearCart() {
+    this.cartService.clear(); 
+  }
+
   getCartContentDetails() {
     this.cartContent = this.cartService.cartContent;
     for (let index = 0; index < this.cartContent.length; index++){
