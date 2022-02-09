@@ -37,7 +37,14 @@ login = (req,res,next) => {
       .catch(error => res.status(500).json({ error }));
 }
 
+const profile = (req, res ,next) => {
+    User.findOne({ _id: req.params.id})
+        .then(user => res.status(200).json(user))
+        .catch(error => res.status(500).json({error}))
+}
+
 module.exports = {
     signup,
-    login
+    login,
+    profile
 }
